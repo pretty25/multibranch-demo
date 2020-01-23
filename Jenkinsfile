@@ -1,4 +1,5 @@
-@Library('github.com/cloudbeers/multibranch-demo-lib') _
+//@Library('github.com/cloudbeers/multibranch-demo-lib') _
+@Library('multibranch-demo-lib') _
 properties([parameters([string(name: 'goVersion', defaultValue: '1.5.0', description: 'Which version of Go language to use.')])])
 standardBuild environment: "golang:${params.goVersion}",
     mainScript: '''
